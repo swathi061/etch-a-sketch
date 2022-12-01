@@ -18,13 +18,15 @@
       <div class="header">
         <h1>Etch a sketch</h1>
         <div class="buttons">
-          <button class="black">Black</button>
-          <button class="colors">Colors</button>
-          <button class="eraser">Eraser</button>
-          <button class="reset">Reset</button>
+          <button class="black" id="black">Black</button>
+          <button class="colors" id="colors">Colors</button>
+          <button class="eraser" id="eraser">Eraser</button>
+          <button class="reset" id="reset">Reset</button>
+          <input type="range" min="8" max="100" value="16" class="slider" id="slider">
+          <p class="num" id="num"></p>
         </div>
       </div>
-      <div class="playground" id="playground"></div>
+      <div class="playground" id="playground" x-init="addListeners()" ></div>
     </div>
     <script src="script.js"></script>
   </body>
